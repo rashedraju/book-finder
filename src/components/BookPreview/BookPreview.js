@@ -1,5 +1,4 @@
 import { Skeleton } from '@mui/material';
-import PropTypes from 'prop-types';
 import React from 'react';
 import AsyncImage from '../../hoc/AsyncImage';
 import Button from '../Button/Button';
@@ -71,13 +70,5 @@ const BookPreview = ({ book, onMyShelfAction }) => (
         )}
     </StyledBookPreview>
 );
-
-BookPreview.propTypes = {
-    book: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-        authors: PropTypes.string.isRequired
-    }).isRequired
-};
 
 export default BookPreview;

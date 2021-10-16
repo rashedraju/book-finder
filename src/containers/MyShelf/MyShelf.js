@@ -1,7 +1,7 @@
 import React from 'react';
 import { Section, SectionTitle } from '../../assets/styles/Component.styled';
 import Bookshelf from '../../components/Bookshelf/Bookshelf';
-import Empty from '../../components/Empty/Empty';
+import NotFound from '../../components/NotFound/NotFound';
 import { useBook } from '../../contexts/BookContext';
 
 const MyShelf = () => {
@@ -13,7 +13,7 @@ const MyShelf = () => {
             {myShelf.length > 0 ? (
                 <Bookshelf books={myShelf} />
             ) : (
-                <Empty message="Bookshelf is empty" />
+                <NotFound message="Bookshelf is empty" />
             )}
         </Section>
     );

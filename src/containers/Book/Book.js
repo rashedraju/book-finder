@@ -31,7 +31,7 @@ const Book = () => {
                     description: volume.description ?? ''
                 };
                 setBook(bookData);
-            } catch (error) {
+            } catch (err) {
                 //
             }
         },

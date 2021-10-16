@@ -2,7 +2,7 @@
 
 ## Why?
 
-The main purpose of this project is demonstrate my skill on ReactJs.
+The main purpose of this project is demonstrate my skill on ReactJs.<br />
 See live on https://rashedraju.github.io/book-finder/
 
 ## Tools

@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchForm = styled.form``;
 
 export const SearchField = styled.input.attrs({
-    type: "text",
-    placeholder: "Search by name, title or author",
+    type: 'text',
+    placeholder: 'Search by name, title or author'
 })`
     width: 75%;
     background-color: ${({ theme }) => theme.colors.primary.light};

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Section } from "../../assets/styles/Component.styled";
-import { flexCenter } from "../../assets/styles/utility.styled";
+import styled from 'styled-components';
+import { Section } from '../../assets/styles/Component.styled';
+import { flexCenter } from '../../assets/styles/utility.styled';
 
 export const HomeStyled = styled(Section)`
     display: flex;

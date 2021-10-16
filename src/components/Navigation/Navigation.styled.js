@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
-import { flexCenter } from "../../assets/styles/utility.styled";
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import { flexCenter } from '../../assets/styles/utility.styled';
 
 export const Nav = styled.nav`
     ul {
@@ -12,6 +12,5 @@ export const Nav = styled.nav`
 `;
 
 export const Link = styled(NavLink)`
-    border-bottom: ${({ theme, active }) =>
-        active && `2px solid ${theme.colors.active}}`};
+    border-bottom: ${({ theme, active }) => active && `2px solid ${theme.colors.active}}`};
 `;

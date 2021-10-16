@@ -1,8 +1,8 @@
-import React from "react";
-import { useBook } from "../../contexts/BookContext";
-import Bookshelf from "../../components/Bookshelf/Bookshelf";
-import { Section, SectionTitle } from "../../assets/styles/Component.styled";
-import Empty from "../../components/Empty/Empty";
+import React from 'react';
+import { Section, SectionTitle } from '../../assets/styles/Component.styled';
+import Bookshelf from '../../components/Bookshelf/Bookshelf';
+import Empty from '../../components/Empty/Empty';
+import { useBook } from '../../contexts/BookContext';
 
 const MyShelf = () => {
     const { myShelf } = useBook();

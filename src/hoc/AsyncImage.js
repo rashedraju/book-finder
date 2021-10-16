@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 const AsyncImage = (props) => {
     const { src, alt } = props;
@@ -11,17 +11,19 @@ const AsyncImage = (props) => {
 
         if (src) {
             const image = new Image();
-            image.addEventListener("load", loadSrc);
+            image.addEventListener('load', loadSrc);
             image.src = src;
 
             return () => {
-                image.removeEventListener("load", loadSrc);
+                image.removeEventListener('load', loadSrc);
             };
         }
+
+        return () => {};
     }, [src]);
 
     if (loadedSrc === src) {
-        return <img {...props} alt={alt} />;
+        return <img src={src} alt={alt} />;
     }
 
     return null;

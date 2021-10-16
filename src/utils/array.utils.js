@@ -3,10 +3,9 @@ export const removeDuplicateObjectFromArray = (data, on, key) => {
     const uniq = data.filter((item) => {
         if (title.includes(item[on][key])) {
             return false;
-        } else {
-            title.push(item[on][key]);
-            return true;
         }
+        title.push(item[on][key]);
+        return true;
     });
     return uniq;
 };

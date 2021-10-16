@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import PageSkeleton from "../components/PageSkeleton/PageSkeleton";
+import { useEffect, useState } from 'react';
+import PageSkeleton from '../components/PageSkeleton/PageSkeleton';
 
 const asyncComponent = (importedComponent) => {
     const useAsyncComponent = () => {

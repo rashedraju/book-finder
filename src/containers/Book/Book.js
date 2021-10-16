@@ -1,18 +1,18 @@
-import React, { useEffect, useCallback, useState } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-import { SEARCH_BY_ID } from "../../utils/constants";
-import BookPreview from "../../components/BookPreview/BookPreview";
-import { Section } from "../../assets/styles/Component.styled";
-import { useBook } from "../../contexts/BookContext";
-import { Snackbar } from "@mui/material";
+import { Snackbar } from '@mui/material';
+import axios from 'axios';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { Section } from '../../assets/styles/Component.styled';
+import BookPreview from '../../components/BookPreview/BookPreview';
+import { useBook } from '../../contexts/BookContext';
+import { SEARCH_BY_ID } from '../../utils/constants';
 
 const Book = () => {
     const params = useParams();
     const [book, setBook] = useState();
     const [notification, setNotification] = useState({
         isOpen: false,
-        message: "",
+        message: ''
     });
     const { addToMyShelf, removeFromMyShelf, isAddedToMyShelf } = useBook();
 
@@ -23,12 +23,12 @@ const Book = () => {
 
                 const volume = response.data.volumeInfo;
                 const bookData = {
-                    id: response.data.id ?? "",
+                    id: response.data.id ?? '',
                     addedToMyShelf: isAddedToMyShelf(response.data.id),
-                    title: volume.title ?? "",
-                    authors: volume.authors?.join(", "),
-                    image: volume.imageLinks.thumbnail ?? "",
-                    description: volume.description ?? "",
+                    title: volume.title ?? '',
+                    authors: volume.authors?.join(', '),
+                    image: volume.imageLinks.thumbnail ?? '',
+                    description: volume.description ?? ''
                 };
                 setBook(bookData);
             } catch (error) {
@@ -43,21 +43,21 @@ const Book = () => {
     };
 
     const handleHideNotification = () => {
-        setNotification({ isOpen: false, message: "" });
+        setNotification({ isOpen: false, message: '' });
     };
 
     const handleRemoveFromMyShelf = (bookId) => {
         removeFromMyShelf(bookId);
-        handleShowNotification("Successfully removed");
+        handleShowNotification('Successfully removed');
     };
 
-    const handleAddToMyShelf = (book) => {
-        let notificationMessage = "";
+    const handleAddToMyShelf = (bookObject) => {
+        let notificationMessage = '';
 
-        if (addToMyShelf(book)) {
-            notificationMessage = "Book is added to shelf";
+        if (addToMyShelf(bookObject)) {
+            notificationMessage = 'Book is added to shelf';
         } else {
-            notificationMessage = "Failed to add Book on shelf";
+            notificationMessage = 'Failed to add Book on shelf';
         }
 
         handleShowNotification(notificationMessage);
@@ -79,7 +79,7 @@ const Book = () => {
         <Section>
             <Snackbar
                 open={notification.isOpen}
-                anchorOrigin={{ vertical: "top", horizontal: "right" }}
+                anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
                 autoHideDuration={3000}
                 onClose={handleHideNotification}
                 message={notification.message}

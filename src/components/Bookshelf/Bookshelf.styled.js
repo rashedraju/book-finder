@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BookshelfStyled = styled.div`
     overflow: hidden;
@@ -13,7 +13,7 @@ export const BookWrapper = styled.div`
         flex-direction: column;
     }
 
-    ${({ center }) => center && " justify-content: center"}
+    ${({ center }) => center && ' justify-content: center'}
 `;
 
 export const SkeletonWrapper = styled.div`

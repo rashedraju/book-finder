@@ -1,12 +1,8 @@
-import React, { useRef } from "react";
-import {
-    BookshelfStyled,
-    BookWrapper,
-    SkeletonWrapper,
-} from "./Bookshelf.styled";
-import Scroller from "../Scroller/Scroller";
-import Books from "./Books/Books";
-import { Skeleton } from "@mui/material";
+import { Skeleton } from '@mui/material';
+import React, { useRef } from 'react';
+import Scroller from '../Scroller/Scroller';
+import Books from './Books/Books';
+import { BookshelfStyled, BookWrapper, SkeletonWrapper } from './Bookshelf.styled';
 
 const Bookshelf = ({ books = [] }) => {
     const MAX_BOOK_PER_CELL = 5;
@@ -14,20 +10,14 @@ const Bookshelf = ({ books = [] }) => {
     return (
         <BookshelfStyled>
             {books.length > MAX_BOOK_PER_CELL && (
-                <Scroller
-                    containerRef={bookshelfRef}
-                    scrollOffset={-100}
-                    left
-                />
+                <Scroller containerRef={bookshelfRef} scrollOffset={-100} left />
             )}
-            <BookWrapper
-                ref={bookshelfRef}
-                center={books?.length <= MAX_BOOK_PER_CELL}
-            >
+            <BookWrapper ref={bookshelfRef} center={books?.length <= MAX_BOOK_PER_CELL}>
                 {books.length > 0 ? (
                     <Books books={books} />
                 ) : (
                     new Array(4).fill(0).map((_, i) => (
+                        // eslint-disable-next-line react/no-array-index-key
                         <SkeletonWrapper key={`bookshelf-${i}`}>
                             <Skeleton
                                 variant="rectangular"

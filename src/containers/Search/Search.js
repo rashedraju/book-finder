@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import { Section, SectionTitle } from "../../assets/styles/Component.styled";
-import { useSearch } from "../../hooks/useSearch";
-import { useLocation } from "react-router-dom";
-import Bookshelf from "../../components/Bookshelf/Bookshelf";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Section, SectionTitle } from '../../assets/styles/Component.styled';
+import Bookshelf from '../../components/Bookshelf/Bookshelf';
+import { useSearch } from '../../hooks/useSearch';
 
 const Explore = () => {
     const { books, search } = useSearch();
@@ -10,7 +10,7 @@ const Explore = () => {
 
     useEffect(() => {
         const urlParams = new URLSearchParams(location.search);
-        search(urlParams.get("q"));
+        search(urlParams.get('q'));
     }, [search, location.search]);
 
     return (

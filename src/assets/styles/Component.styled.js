@@ -1,5 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
-import { NavLink } from "react-router-dom";
+import styled, { css, keyframes } from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const buttonStyle = css`
     padding: 0.5rem 3rem;

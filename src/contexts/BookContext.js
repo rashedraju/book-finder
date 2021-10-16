@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from "react";
+import { createContext, useContext, useState } from 'react';
 
 const BookContext = createContext();
 
@@ -7,8 +7,7 @@ export const useBook = () => useContext(BookContext);
 export const BookProvider = ({ children }) => {
     const [myShelf, setMyShelf] = useState([]);
 
-    const isAddedToMyShelf = (bookId) =>
-        myShelf.some((book) => book.id === bookId);
+    const isAddedToMyShelf = (bookId) => myShelf.some((book) => book.id === bookId);
 
     const addToMyShelf = (book) => {
         if (!isAddedToMyShelf(book.id)) {
@@ -27,10 +26,8 @@ export const BookProvider = ({ children }) => {
         myShelf,
         addToMyShelf,
         removeFromMyShelf,
-        isAddedToMyShelf,
+        isAddedToMyShelf
     };
 
-    return (
-        <BookContext.Provider value={value}>{children}</BookContext.Provider>
-    );
+    return <BookContext.Provider value={value}>{children}</BookContext.Provider>;
 };

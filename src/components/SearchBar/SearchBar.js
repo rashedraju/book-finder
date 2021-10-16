@@ -1,6 +1,6 @@
-import { SearchForm, SearchField } from "./SearchBar.styled";
-import { useHistory } from "react-router-dom";
-import { useRef } from "react";
+import { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
+import { SearchField, SearchForm } from './SearchBar.styled';
 
 const SearchBar = () => {
     const searchFieldRef = useRef();

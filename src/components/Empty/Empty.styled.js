@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { flexCenter } from "../../assets/styles/utility.styled";
+import styled from 'styled-components';
+import { flexCenter } from '../../assets/styles/utility.styled';
 
 export const EmptyWrapper = styled.div`
     ${flexCenter};

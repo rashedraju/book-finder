@@ -1,15 +1,15 @@
-import React from "react";
+import { Skeleton } from '@mui/material';
+import React from 'react';
+import AsyncImage from '../../hoc/AsyncImage';
+import Button from '../Button/Button';
 import {
-    StyledBookPreview,
-    ImageWraper,
-    DetailsWrapper,
-    Title,
     Author,
     Description,
-} from "./BookPreview.styled";
-import AsyncImage from "../../hoc/AsyncImage";
-import { Skeleton } from "@mui/material";
-import Button from "../Button/Button";
+    DetailsWrapper,
+    ImageWraper,
+    StyledBookPreview,
+    Title
+} from './BookPreview.styled';
 
 const BookPreview = (props) => {
     const { book, onMyShelfAction } = props;
@@ -28,9 +28,7 @@ const BookPreview = (props) => {
                         </Author>
                         <Description>{book.description}</Description>
                         <Button onClick={onMyShelfAction} center>
-                            {book.addedToMyShelf
-                                ? "Remove from my shelf"
-                                : "Add to my shelf"}
+                            {book.addedToMyShelf ? 'Remove from my shelf' : 'Add to my shelf'}
                         </Button>
                     </DetailsWrapper>
                 </>
@@ -42,7 +40,7 @@ const BookPreview = (props) => {
                             animation="wave"
                             width="40%"
                             height={200}
-                            style={{ margin: "0 auto" }}
+                            style={{ margin: '0 auto' }}
                         />
                     </ImageWraper>
                     <DetailsWrapper>
@@ -51,18 +49,19 @@ const BookPreview = (props) => {
                             animation="wave"
                             width="100%"
                             height={20}
-                            style={{ marginBottom: "0.5rem" }}
+                            style={{ marginBottom: '0.5rem' }}
                         />
                         <Skeleton
                             variant="text"
                             animation="wave"
                             width="90%"
                             height={10}
-                            style={{ marginBottom: "1rem" }}
+                            style={{ marginBottom: '1rem' }}
                         />
                         {new Array(5).fill(0).map((_, i) => (
                             <Skeleton
-                                key={i}
+                                // eslint-disable-next-line react/no-array-index-key
+                                key={`skeleton-${i}`}
                                 variant="text"
                                 animation="wave"
                                 width="100%"

@@ -1,7 +1,9 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import { ButtonOutline, ButtonPrimary } from './Button.styled';
 
-const Button = ({ variant, style = {}, center, onClick, children }) => {
+const Button = (props) => {
+    const { variant, style = {}, center = false, onClick, children } = props;
     if (variant === 'outline')
         return (
             <ButtonOutline onClick={onClick} style={style} center={center ? 1 : 0}>
@@ -16,6 +18,14 @@ const Button = ({ variant, style = {}, center, onClick, children }) => {
             {children}{' '}
         </ButtonPrimary>
     );
+};
+
+Button.propTypes = {
+    variant: PropTypes.string,
+    style: PropTypes.instanceOf(Object),
+    center: PropTypes.bool,
+    onClick: PropTypes.func,
+    children: PropTypes.node
 };
 
 export default Button;

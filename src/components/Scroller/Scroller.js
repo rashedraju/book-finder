@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md';
+import { PropTypes } from 'prop-types';
 import { useScroll } from '../../hooks/useScroll';
 import { ScrollerStyled } from './Scroller.styled';
 
@@ -12,6 +13,14 @@ const Scroller = ({ containerRef, scrollOffset, left = false }) => {
             {left ? <MdOutlineArrowBackIos /> : <MdOutlineArrowForwardIos />}
         </ScrollerStyled>
     );
+};
+
+Scroller.propTypes = {
+    containerRef: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.shape({ current: PropTypes.instanceOf(Object) })
+    ]),
+    scrollOffset: PropTypes.number
 };
 
 export default Scroller;

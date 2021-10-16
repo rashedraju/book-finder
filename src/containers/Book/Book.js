@@ -32,7 +32,7 @@ const Book = () => {
                 };
                 setBook(bookData);
             } catch (error) {
-                console.log(error);
+                //
             }
         },
         [isAddedToMyShelf]

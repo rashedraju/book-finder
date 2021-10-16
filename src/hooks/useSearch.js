@@ -4,7 +4,7 @@ import { removeDuplicateObjectFromArray } from '../utils/array.utils';
 import { SEARCH_BY_QUERY } from '../utils/constants';
 
 export const useSearch = () => {
-    const [books, setBooks] = useState();
+    const [books, setBooks] = useState([]);
     const [error, setError] = useState();
 
     const processBooks = (bookData) => {

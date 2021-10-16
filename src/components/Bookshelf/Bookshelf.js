@@ -1,5 +1,6 @@
-import { Skeleton } from '@mui/material';
 import React, { useRef } from 'react';
+import { Skeleton } from '@mui/material';
+import { PropTypes } from 'prop-types';
 import Scroller from '../Scroller/Scroller';
 import Books from './Books/Books';
 import { BookshelfStyled, BookWrapper, SkeletonWrapper } from './Bookshelf.styled';
@@ -49,6 +50,10 @@ const Bookshelf = ({ books = [] }) => {
             )}
         </BookshelfStyled>
     );
+};
+
+Bookshelf.propTypes = {
+    books: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Bookshelf;

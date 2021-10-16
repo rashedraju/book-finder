@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { PropTypes } from 'prop-types';
 
 const AsyncImage = (props) => {
     const { src, alt } = props;
@@ -27,6 +28,11 @@ const AsyncImage = (props) => {
     }
 
     return null;
+};
+
+AsyncImage.propTypes = {
+    src: PropTypes.string,
+    alt: PropTypes.string
 };
 
 export default AsyncImage;

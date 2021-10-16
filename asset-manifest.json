@@ -1,0 +1,33 @@
+{
+  "files": {
+    "static/js/0.2dd6e046.chunk.js": "/book-finder/static/js/0.2dd6e046.chunk.js",
+    "static/js/0.2dd6e046.chunk.js.map": "/book-finder/static/js/0.2dd6e046.chunk.js.map",
+    "static/js/1.43b9d9d5.chunk.js": "/book-finder/static/js/1.43b9d9d5.chunk.js",
+    "static/js/1.43b9d9d5.chunk.js.map": "/book-finder/static/js/1.43b9d9d5.chunk.js.map",
+    "main.js": "/book-finder/static/js/main.814b4976.chunk.js",
+    "main.js.map": "/book-finder/static/js/main.814b4976.chunk.js.map",
+    "runtime-main.js": "/book-finder/static/js/runtime-main.fc211808.js",
+    "runtime-main.js.map": "/book-finder/static/js/runtime-main.fc211808.js.map",
+    "static/js/4.16b59d26.chunk.js": "/book-finder/static/js/4.16b59d26.chunk.js",
+    "static/js/4.16b59d26.chunk.js.map": "/book-finder/static/js/4.16b59d26.chunk.js.map",
+    "static/js/5.6363c9ca.chunk.js": "/book-finder/static/js/5.6363c9ca.chunk.js",
+    "static/js/5.6363c9ca.chunk.js.map": "/book-finder/static/js/5.6363c9ca.chunk.js.map",
+    "static/js/6.71f5b2db.chunk.js": "/book-finder/static/js/6.71f5b2db.chunk.js",
+    "static/js/6.71f5b2db.chunk.js.map": "/book-finder/static/js/6.71f5b2db.chunk.js.map",
+    "static/js/7.722a5173.chunk.js": "/book-finder/static/js/7.722a5173.chunk.js",
+    "static/js/7.722a5173.chunk.js.map": "/book-finder/static/js/7.722a5173.chunk.js.map",
+    "static/js/8.02c9894e.chunk.js": "/book-finder/static/js/8.02c9894e.chunk.js",
+    "static/js/8.02c9894e.chunk.js.map": "/book-finder/static/js/8.02c9894e.chunk.js.map",
+    "static/js/9.7dbaa24e.chunk.js": "/book-finder/static/js/9.7dbaa24e.chunk.js",
+    "static/js/9.7dbaa24e.chunk.js.map": "/book-finder/static/js/9.7dbaa24e.chunk.js.map",
+    "index.html": "/book-finder/index.html",
+    "static/js/4.16b59d26.chunk.js.LICENSE.txt": "/book-finder/static/js/4.16b59d26.chunk.js.LICENSE.txt",
+    "static/media/empty-image.13cdddc5.svg": "/book-finder/static/media/empty-image.13cdddc5.svg",
+    "static/media/home-display.0799dd9c.svg": "/book-finder/static/media/home-display.0799dd9c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc211808.js",
+    "static/js/4.16b59d26.chunk.js",
+    "static/js/main.814b4976.chunk.js"
+  ]
+}
